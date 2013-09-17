@@ -74,10 +74,10 @@ require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 #   exit
 # end
 
-unless User.count == 0
-  puts "Only run this script against an empty DB"
-  exit
-end
+# unless User.count == 0
+#   puts "Only run this script against an empty DB"
+#   exit
+# end
 
 puts "Creating 100 users"
 users = 100.times.map do |i|
