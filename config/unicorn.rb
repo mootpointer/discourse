@@ -3,11 +3,11 @@
 discourse_path = File.expand_path(File.expand_path(File.dirname(__FILE__)) + "/../")
 
 # tune down if not enough ram
-worker_processes <%= ENV['WEB_CONCURRENCY'] || 2%>
+worker_processes Integer(ENV['WEB_CONCURRENCY'] ||2)
 
 working_directory discourse_path
 
-listen 8080, :tcp_nopush => true
+listen ENV['PORT'], :tcp_nopush => true
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
