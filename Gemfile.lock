@@ -215,6 +215,7 @@ GEM
       ruby-hmac
     formatador (0.2.4)
     fspath (2.0.4)
+    gabbler (0.1.0)
     handlebars-source (1.0.12)
     hashie (2.0.4)
     highline (1.6.18)
@@ -491,6 +492,7 @@ DEPENDENCIES
   fastimage
   flamegraph
   fog
+  gabbler
   handlebars-source (= 1.0.12)
   highline
   hiredis

@@ -29,13 +29,15 @@ def unbundled_require(gem)
 end
 
 require 'optparse'
-begin
-  unbundled_require 'gabbler'
-rescue LoadError
-  puts "installing gabbler gem"
-  puts `gem install gabbler`
-  unbundled_require 'gabbler'
-end
+# begin
+#   unbundled_require 'gabbler'
+# rescue LoadError
+#   puts "installing gabbler gem"
+#   puts `gem install gabbler`
+#   unbundled_require 'gabbler'
+# end
+
+require 'gabbler'
 
 user_id = nil
 
@@ -67,10 +69,10 @@ end
 
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 
-unless Rails.env == "profile"
-  puts "This script should only be used in the profile environment"
-  exit
-end
+# unless Rails.env == "profile"
+#   puts "This script should only be used in the profile environment"
+#   exit
+# end
 
 unless User.count == 0
   puts "Only run this script against an empty DB"
