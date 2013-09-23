@@ -35,12 +35,6 @@ end
 
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 
-unless ["profile", "development"].include? Rails.env
-  puts "Bad idea to run a script that inserts random posts in any non development environment"
-  exit
-end
-
-
 user = User.find(user_id)
 last_topics = Topic.order('id desc').limit(10).pluck(:id)
 
