@@ -209,3 +209,5 @@ group :profile do
 end
 
 gem 'gabbler'
+gem 'skylight'
+gem 'newrelic_rpm'
